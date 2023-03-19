@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://partnerconnect.zephra.com.au/test1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><link href="./SFChatTest_files/esw.min.css" type="text/css" rel="stylesheet"><style id="inert-style">
+[inert] {
+	pointer-events: none;
+	cursor: default;
+}
+
+[inert], [inert] * {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+</style></head><body>
+
+<h1>Salesforce Chat Test Site</h1>
+
+<style type="text/css">
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #562145;
+		font-family: "Salesforce Sans", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #562145;
+	}
+	@font-face {
+		font-family: 'Salesforce Sans';
+		src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+		url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+	}
+</style>
+
+<script type="text/javascript" src="./SFChatTest_files/deployment.js.download"></script>
+<script type="text/javascript">
+liveagent.init('https://d.la2-c2-ukb.salesforceliveagent.com/chat', '5725j000000g3d3', '00D5j000001xpZY');
+</script>
+
+<script type="text/javascript" src="./SFChatTest_files/esw.min.js.download"></script>
+<script type="text/javascript">
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://zephragroup-dev-ed.my.salesforce.com',
+			'https://zephragroup-dev-ed.my.site.com/supporthub',
+			gslbBaseURL,
+			'00D5j000001xpZY',
+			'ZG_Support2',
+			{
+				baseLiveAgentContentURL: 'https://c.la2-c2-ukb.salesforceliveagent.com/content',
+				deploymentId: '5725j000000g3d3',
+				buttonId: '5735j000000g4YK',
+				baseLiveAgentURL: 'https://d.la2-c2-ukb.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'ZG_Support',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://zephragroup-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script><script id="common-script" type="text/javascript" src="./SFChatTest_files/common.min.js.download"></script>
+
+
+
+<script id="liveagent-esw-script" type="text/javascript" src="./SFChatTest_files/liveagent.esw.min.js.download"></script><form id="fileUploadForm" enctype="multipart/form-data" method="post" target="fileUploadIframe"><input type="file" id="fileSelector" name="file" style="display: none;"><input name="filename" type="hidden"></form><iframe id="fileUploadIframe" name="fileUploadIframe" title="FileUploadFrame" style="display: none;" src="./SFChatTest_files/saved_resource.html"></iframe><iframe id="esw_storage_iframe" src="./SFChatTest_files/esw.html" title="Live Chat Metadata" style="display: none;"></iframe><script type="text/javascript" src="./SFChatTest_files/EmbeddedServiceConfig.jsonp"></script><script id="invite-esw-script" type="text/javascript" src="./SFChatTest_files/invite.esw.min.js.download"></script><div class="embeddedServiceHelpButton"><div class="helpButton"><button class="uiButton helpButtonEnabled" href="javascript:void(0)"><span class="embeddedServiceIcon" aria-hidden="true" data-icon="&#59648;" style="display: inline-block;"></span><span class="helpButtonLabel" id="helpButtonSpan" aria-live="polite" aria-atomic="true"><span class="assistiveText">Live chat:</span><span class="message">Chat with an Expert</span></span></button></div></div><script id="inert-script" type="text/javascript" src="./SFChatTest_files/inert.min.js.download"></script></body></html>
